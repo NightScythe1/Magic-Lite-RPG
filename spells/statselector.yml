@@ -4,7 +4,7 @@ statselector:
       cast:
       - class: Selector
   parameters:
-    title: "&5$balanceStat Points &0- &2$xp XP"
+    title: "&5$balance &0- &2$xp XP"
     auto_close: false
     apply_to: mage
     cost_type: "statpoints"

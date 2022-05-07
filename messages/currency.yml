@@ -1,0 +1,5 @@
+currency:
+  statpoints:
+    name: "Stat Points"
+    description: "Right-click to earn $type"
+    name_short: "Stat Points"
