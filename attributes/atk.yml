@@ -1,0 +1,6 @@
+atk:
+  name: Attack
+  icon: diamond_sword
+  default: 0
+  min: 0
+  max: 20

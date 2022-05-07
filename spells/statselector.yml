@@ -1,0 +1,137 @@
+statselector:
+  hidden: true
+  actions:
+      cast:
+      - class: Selector
+  parameters:
+    title: "&5$balanceStat Points &0- &2$xp XP"
+    auto_close: false
+    apply_to: mage
+    cost_type: "statpoints"
+    earn_type: "statpoints"
+    show_unavailable: true
+    allow_attribute_reduction: true
+    placeholder_icon: gray
+    confirm: true
+    options:
+    - placeholder: true
+    - attribute: hp
+      name: "&aIncrease Health"
+      icon: green_stained_glass_pane
+      icon_disabled: white_stained_glass_pane
+      attribute_amount: 1
+      cost: 1
+      costs:
+        enchanted_golden_apple: 1
+    - attribute: atk
+      name: "&aIncrease Attack"
+      icon: green_stained_glass_pane
+      icon_disabled: white_stained_glass_pane
+      attribute_amount: 1
+      cost: 1
+      costs:
+        enchanted_golden_apple: 1
+    - attribute: def
+      name: "&aIncrease Defence"
+      icon: green_stained_glass_pane
+      icon_disabled: white_stained_glass_pane
+      attribute_amount: 1
+      cost: 1
+      costs:
+        enchanted_golden_apple: 1
+    - attribute: pwr
+      name: "&aIncrease Power"
+      icon: green_stained_glass_pane
+      icon_disabled: white_stained_glass_pane
+      attribute_amount: 1
+      cost: 1
+      costs:
+        enchanted_golden_apple: 1
+    - attribute: res
+      name: "&aIncrease Resistance"
+      icon: green_stained_glass_pane
+      icon_disabled: white_stained_glass_pane
+      attribute_amount: 1
+      cost: 1
+      costs:
+        enchanted_golden_apple: 1
+    - attribute: spd
+      name: "&aIncrease Speed"
+      icon: green_stained_glass_pane
+      icon_disabled: white_stained_glass_pane
+      attribute_amount: 1
+      cost: 1
+      costs:
+        enchanted_golden_apple: 1
+    - placeholder: true
+    - placeholder: true
+    - placeholder: true
+    - attribute: hp
+      name: Health
+    - attribute: atk
+      name: Attack
+    - attribute: def
+      name: Defence
+    - attribute: pwr
+      name: Power
+    - attribute: res
+      name: Resistance
+    - attribute: spd
+      name: Speed
+    - icon: nether_star
+      name: "&a1 Stat Point"
+      costs:
+        xp: 1300
+      earn: 1
+    - placeholder: true
+    - placeholder: true
+    - attribute: hp
+      name: "&cDecrease Health"
+      icon: red_stained_glass_pane
+      icon_disabled: black_stained_glass_pane
+      attribute_amount: -1
+      earn: 1
+      costs:
+        enchanted_golden_apple: 1
+    - attribute: atk
+      name: "&cDecrease Attack"
+      icon: red_stained_glass_pane
+      icon_disabled: black_stained_glass_pane
+      attribute_amount: -1
+      earn: 1
+      costs:
+        enchanted_golden_apple: 1
+    - attribute: def
+      name: "&cDecrease Defence"
+      icon: red_stained_glass_pane
+      icon_disabled: black_stained_glass_pane
+      attribute_amount: -1
+      earn: 1
+      costs:
+        enchanted_golden_apple: 1
+    - attribute: pwr
+      name: "&cDecrease Power"
+      icon: red_stained_glass_pane
+      icon_disabled: black_stained_glass_pane
+      attribute_amount: -1
+      earn: 1
+      costs:
+        enchanted_golden_apple: 1
+    - attribute: res
+      name: "&cDecrease Resistance"
+      icon: red_stained_glass_pane
+      icon_disabled: black_stained_glass_pane
+      attribute_amount: -1
+      earn: 1
+      costs:
+        enchanted_golden_apple: 1
+    - attribute: spd
+      name: "&cDecrease Speed"
+      icon: red_stained_glass_pane
+      icon_disabled: black_stained_glass_pane
+      attribute_amount: -1
+      earn: 1
+      costs:
+        enchanted_golden_apple: 1
+    - placeholder: true
+    - placeholder: true

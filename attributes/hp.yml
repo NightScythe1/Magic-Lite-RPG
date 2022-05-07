@@ -1,0 +1,6 @@
+hp:
+  name: Health
+  icon: totem_of_undying
+  default: 0
+  min: 0
+  max: 20

@@ -1,0 +1,35 @@
+stats:
+  spells:
+    - statselector
+  locked: false
+  #MINECRAFT stat changes
+  #
+  protection:
+    fall: "res / 20"
+  entity_attributes:
+    #health stats, aka HP
+    #
+    generic_max_health:
+      value: "hp + 20"
+      operation: base
+    #attack stats, aka ATK
+    #
+    generic_attack_damage:
+      value: "atk / 40"
+      operation: MULTIPLY_SCALAR_1
+    #defence stats, aka DEF
+    #
+    generic_armor:
+      value: "def / 2"
+      operation: base
+    generic_armor_toughness:
+      value: "def / 2"
+      operation: base
+    generic_knockback_resistance:
+      value: "def / 20"
+      operation: base
+    #speed stats, aka SPD
+    #
+    generic_movement_speed:
+      value: "(spd / 500) + 0.1"
+      operation: base

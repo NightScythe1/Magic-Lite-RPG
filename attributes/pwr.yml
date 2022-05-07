@@ -1,0 +1,6 @@
+pwr:
+  name: Power
+  icon: enchanted_book
+  default: 0
+  min: 0
+  max: 20

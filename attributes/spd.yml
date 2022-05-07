@@ -1,0 +1,6 @@
+spd:
+  name: Speed
+  icon: feather
+  default: 0
+  min: 0
+  max: 20

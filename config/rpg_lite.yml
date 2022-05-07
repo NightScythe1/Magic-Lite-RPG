@@ -1,0 +1,15 @@
+sp_enabled: false
+
+spell_blocks:
+  enchantment_table:
+    right_click: ""
+    right_click_sneak: statselector
+    requires_wand: false
+enchant_block: enchantment_table
+
+custom_currency:
+ statpoints:
+  name: Stat Points
+  max: 120
+  default: 5
+  icon: nether_star

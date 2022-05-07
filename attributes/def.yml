@@ -1,0 +1,6 @@
+def:
+  name: Defence
+  icon: iron_chestplate
+  default: 0
+  min: 0
+  max: 20
