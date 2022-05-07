@@ -1,5 +1,3 @@
-sp_enabled: false
-
 spell_blocks:
   enchantment_table:
     right_click: ""
