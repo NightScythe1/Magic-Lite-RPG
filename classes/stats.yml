@@ -1,11 +1,24 @@
 stats:
-  spells:
-    - statselector
   locked: false
   #MINECRAFT stat changes
   #
+  weakness:
   protection:
-    fall: "res / 20"
+    fall: "res / 25"
+    burn: "res / 40"
+    fire: "res / 40"
+    lava: "res / 40"
+    lightning: "res / 40"
+    dragon_breath: "res / 40"
+    wither: "res / 40"
+    drown: "res / 40"
+    magic: "res / 80"
+    physical: "def / 80"
+    projectile: "def / 80"
+    explosion: "def / 80"
+    falling_block: "def / 80"
+    anvil: "def / 80"
+    fly_into_wall: "def / 80"
   entity_attributes:
     #health stats, aka HP
     #
