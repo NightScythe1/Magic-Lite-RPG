@@ -2,7 +2,8 @@ stats:
   locked: false
   #MINECRAFT stat changes
   #
-  weakness:
+  mana_max: "(pwr * 2.5) + 100"
+  mana_regeneration: 0
   protection:
     fall: "res / 25"
     burn: "res / 40"

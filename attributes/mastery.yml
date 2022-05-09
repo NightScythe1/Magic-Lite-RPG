@@ -1,0 +1,6 @@
+mastery:
+  name: Mastery
+  icon: ender_eye
+  default: 0
+  min: 0
+  max: 60

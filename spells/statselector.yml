@@ -11,58 +11,70 @@ statselector:
     earn_type: "statpoints"
     show_unavailable: true
     allow_attribute_reduction: true
-    placeholder_icon: gray
-    confirm: true
+    placeholder_icon: air
+    limit: 25
     options:
     - placeholder: true
     - attribute: hp
+      requirement:
+        attribute:
+          attribute: hp
+          max: 20
       name: "&aIncrease Health"
       icon: green_stained_glass_pane
       icon_disabled: white_stained_glass_pane
       attribute_amount: 1
       cost: 1
-      costs:
-        enchanted_golden_apple: 1
     - attribute: atk
+      requirement:
+        attribute:
+          attribute: atk
+          max: 20
       name: "&aIncrease Attack"
       icon: green_stained_glass_pane
       icon_disabled: white_stained_glass_pane
       attribute_amount: 1
       cost: 1
-      costs:
-        enchanted_golden_apple: 1
     - attribute: def
+      requirement:
+        attribute:
+          attribute: def
+          max: 20
       name: "&aIncrease Defence"
       icon: green_stained_glass_pane
       icon_disabled: white_stained_glass_pane
       attribute_amount: 1
       cost: 1
-      costs:
-        enchanted_golden_apple: 1
     - attribute: pwr
+      requirement:
+        attribute:
+          attribute: pwr
+          max: 20
       name: "&aIncrease Power"
       icon: green_stained_glass_pane
       icon_disabled: white_stained_glass_pane
       attribute_amount: 1
       cost: 1
-      costs:
-        enchanted_golden_apple: 1
     - attribute: res
+      requirement:
+        attribute:
+          attribute: res
+          max: 20
       name: "&aIncrease Resistance"
       icon: green_stained_glass_pane
       icon_disabled: white_stained_glass_pane
       attribute_amount: 1
       cost: 1
-      costs:
-        enchanted_golden_apple: 1
     - attribute: spd
+      requirement:
+        attribute:
+          attribute: spd
+          max: 20
       name: "&aIncrease Speed"
       icon: green_stained_glass_pane
       icon_disabled: white_stained_glass_pane
       attribute_amount: 1
       cost: 1
-      costs:
-        enchanted_golden_apple: 1
     - placeholder: true
     - placeholder: true
     - placeholder: true
@@ -78,60 +90,92 @@ statselector:
       name: Resistance
     - attribute: spd
       name: Speed
-    - icon: nether_star
-      name: "&a1 Stat Point"
+    - attribute: mastery
+      icon: nether_star
+      icon_disabled: barrier
+      attribute_amount: 1
+      requirement:
+        attribute:
+          attribute: mastery
+          max: 60
+      name: "&e&l1 Stat Point"
+      description: "&6$mastery/60"
       costs:
         xp: 1300
       earn: 1
     - placeholder: true
     - placeholder: true
     - attribute: hp
+      requirement:
+        attribute:
+          attribute: hp
+          min: 0
       name: "&cDecrease Health"
       icon: red_stained_glass_pane
       icon_disabled: black_stained_glass_pane
       attribute_amount: -1
       earn: 1
       costs:
-        enchanted_golden_apple: 1
+        xp: 250
     - attribute: atk
+      requirement:
+        attribute:
+          attribute: atk
+          min: 0
       name: "&cDecrease Attack"
       icon: red_stained_glass_pane
       icon_disabled: black_stained_glass_pane
       attribute_amount: -1
       earn: 1
       costs:
-        enchanted_golden_apple: 1
+        xp: 250
     - attribute: def
+      requirement:
+        attribute:
+          attribute: def
+          min: 0
       name: "&cDecrease Defence"
       icon: red_stained_glass_pane
       icon_disabled: black_stained_glass_pane
       attribute_amount: -1
       earn: 1
       costs:
-        enchanted_golden_apple: 1
+        xp: 250
     - attribute: pwr
+      requirement:
+        attribute:
+          attribute: pwr
+          min: 0
       name: "&cDecrease Power"
       icon: red_stained_glass_pane
       icon_disabled: black_stained_glass_pane
       attribute_amount: -1
       earn: 1
       costs:
-        enchanted_golden_apple: 1
+        xp: 250
     - attribute: res
+      requirement:
+        attribute:
+          attribute: res
+          min: 0
       name: "&cDecrease Resistance"
       icon: red_stained_glass_pane
       icon_disabled: black_stained_glass_pane
       attribute_amount: -1
       earn: 1
       costs:
-        enchanted_golden_apple: 1
+        xp: 250
     - attribute: spd
+      requirement:
+        attribute:
+          attribute: spd
+          min: 0
       name: "&cDecrease Speed"
       icon: red_stained_glass_pane
       icon_disabled: black_stained_glass_pane
       attribute_amount: -1
       earn: 1
       costs:
-        enchanted_golden_apple: 1
+        xp: 250
     - placeholder: true
     - placeholder: true

@@ -9,7 +9,7 @@ custom_currency:
  statpoints:
   name: Stat Points
   max: 120
-  default: 5
+  default: 0
   icon: nether_star
 
 damage_types:
