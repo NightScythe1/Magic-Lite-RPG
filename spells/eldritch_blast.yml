@@ -1,0 +1,50 @@
+eldritch_blast:
+  name: Eldritch Blast
+  description:
+  actions:
+    cast:
+    - class: Multiply
+      multiply: "(pwr/15)+1"
+      actions:
+        - class: CustomProjectile
+          actions:
+            - class: Damage
+  effects:
+    cast:
+      - sound: entity_lightning_bolt_thunder
+        sound_pitch: 2
+    hit:
+      - sound: entity_evoker_prepare_summon
+        location: target
+        sound_pitch: 2
+        sound_volume: 3
+      - particle: fireworks_spark
+        particle_offset_x: 0.1
+        particle_offset_y: 0.1
+        particle_offset_z: 0.1
+        particle_count: 10
+        location: target
+        particle_data: 0.3
+    tick:
+      - particle: electric_spark
+        color_override: mage
+        location: target
+        particle_count: 5
+        particle_offset_x: 0.01
+        particle_offset_z: 0.01
+        particle_offset_y: 0.01
+  parameters:
+    cooldown: "((pwr/4)*1000)+4000"
+    no_damage_ticks: 0
+    source_location: eyes
+    tick_size: 0.1
+    hitbox_size: 1
+    range: "(spd/3) + 10"
+    damage: "((pwr/10)+4)"
+    target_type: Damageable
+    velocity_transform:
+      x: 15
+      y: rand(-5,5)
+      z: rand(-5,5)
+  costs:
+    mana: "(pwr+10)"

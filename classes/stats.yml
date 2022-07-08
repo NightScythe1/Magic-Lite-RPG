@@ -1,49 +1,41 @@
 stats:
   locked: false
+  effect_color: random
   #MINECRAFT stat changes
   #
-  mana_max: "(pwr * 2.5) + 100"
-  mana_regeneration: 0
+  mana_max: "(10 + (mna*5)*1.6)"
+  mana_regeneration: "1+mna*0.125"
   protection:
-    fall: "res / 25"
-    burn: "res / 40"
-    fire: "res / 40"
-    lava: "res / 40"
-    lightning: "res / 40"
-    dragon_breath: "res / 40"
-    wither: "res / 40"
-    drown: "res / 40"
-    magic: "res / 80"
-    physical: "def / 80"
-    projectile: "def / 80"
-    explosion: "def / 80"
-    falling_block: "def / 80"
-    anvil: "def / 80"
-    fly_into_wall: "def / 80"
+    physical: "def / 160"
+    projectile: "def / 160"
+    explosion: "def / 160"
+    falling_block: "def / 160"
+    anvil: "def / 160"
+    fly_into_wall: "def / 160"
   entity_attributes:
     #health stats, aka HP
     #
     generic_max_health:
-      value: "hp + 20"
+      value: "hp*0.7 + 5"
       operation: base
     #attack stats, aka ATK
     #
     generic_attack_damage:
-      value: "atk / 40"
+      value: "atk / 60"
       operation: MULTIPLY_SCALAR_1
     #defence stats, aka DEF
     #
     generic_armor:
-      value: "def / 2"
+      value: "def / 4"
       operation: base
     generic_armor_toughness:
-      value: "def / 2"
+      value: "def / 4"
       operation: base
     generic_knockback_resistance:
-      value: "def / 20"
+      value: "def / 40"
       operation: base
     #speed stats, aka SPD
     #
     generic_movement_speed:
-      value: "(spd / 500) + 0.1"
+      value: "(spd / 750) + 0.08"
       operation: base

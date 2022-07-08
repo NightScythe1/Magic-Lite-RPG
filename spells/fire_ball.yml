@@ -1,0 +1,57 @@
+fire_ball:
+  name: Test
+  description:
+  actions:
+    cast:
+    - class: Projectile
+      actions:
+        - class: AreaOfEffect
+          radius: 2
+          actions:
+            - class: Damage
+            - class: Ignite
+              duration: "(pwr/5)+3"
+        - class: Sphere
+          radius: "(pwr/18)+1"
+          actions:
+            - class: Cover
+              actions:
+                - class: Burn
+                  melt_ice: true
+  effects:
+    cast:
+      - sound: entity_blaze_shoot
+    hit:
+      - sound: entity_generic_explode
+        location: target
+        sound_volume: 3
+      - particle: flame
+        particle_offset_x: 0.2
+        particle_offset_y: 0.2
+        particle_offset_z: 0.2
+        particle_count: 50
+        location: target
+        particle_data: 0.3
+      - particle: smoke_large
+        particle_offset_x: 0.2
+        particle_offset_y: 0.2
+        particle_offset_z: 0.2
+        particle_count: 50
+        location: target
+        particle_data: 0.3
+  parameters:
+    destructible: burnable
+    projectile: SmallFireball
+    spread: 0
+    source_location: eyes
+    hitbox_size: 1
+    range: "(spd/3) + 10"
+    projectile_effects: 
+    speed: "(spd/100)+0.5"
+    damage: "(pwr/5)+4"
+    target: other
+    undo: "((pwr/4)*1000)+3000"
+    undo_speed: 50
+    cooldown: "((pwr*1000)/2)+3000"
+  costs:
+    mana: "(pwr*1.2)+10"

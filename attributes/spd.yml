@@ -3,4 +3,4 @@ spd:
   icon: feather
   default: 0
   min: 0
-  max: 20
+  max: 50

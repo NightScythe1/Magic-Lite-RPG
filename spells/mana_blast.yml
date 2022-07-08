@@ -1,0 +1,44 @@
+mana_blast:
+  name: Test
+  description:
+  actions:
+    cast:
+    - class: CustomProjectile
+      actions:
+        - class: Damage
+  effects:
+    cast:
+      - sound: block_beacon_power_select
+        sound_pitch: 2
+    hit:
+      - sound: entity_shulker_bullet_hit
+        location: target
+        sound_pitch: -2
+        sound_volume: 3
+      - particle: enchantment_table
+        particle_offset_x: 0.2
+        particle_offset_y: 0.2
+        particle_offset_z: 0.2
+        particle_count: 50
+        location: target
+        to_color: "222222"
+        particle_data: 1
+        particle_size: 1
+    tick:
+      - particle: enchantment_table
+        color_override: mage
+        to_color: "#222222"
+        location: target
+        particle_count: 5
+        particle_size: 2
+        particle_offset_x: 0.25
+        particle_offset_z: 0.25
+        particle_offset_y: 0.25
+  parameters:
+    source_location: eyes
+    hitbox_size: 1
+    range: "(spd/3) + 10"
+    projectile_effects: 
+    velocity: "(spd * 0.25)+10"
+    damage: "(pwr/4)+4"
+    target_type: Damageable

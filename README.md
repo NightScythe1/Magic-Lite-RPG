@@ -1,2 +1,4 @@
-# Magic-Lite-RPG
- Unofficial Magic RPG Lite configs/base
+# Magic-MnM
+ Unofficial Magic RPG/DnD configs/base
+ Mineshafts & Monsters
+ By NightScythe1

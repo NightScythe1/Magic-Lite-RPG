@@ -55,12 +55,12 @@ statselector:
       icon_disabled: white_stained_glass_pane
       attribute_amount: 1
       cost: 1
-    - attribute: res
+    - attribute: mna
       requirement:
         attribute:
-          attribute: res
+          attribute: mna
           max: 20
-      name: "&aIncrease Resistance"
+      name: "&aIncrease Mana"
       icon: green_stained_glass_pane
       icon_disabled: white_stained_glass_pane
       attribute_amount: 1
@@ -80,15 +80,21 @@ statselector:
     - placeholder: true
     - attribute: hp
       name: Health
+      description: "&8Increases total hearts."
     - attribute: atk
+      description: "&8Increases attack damage."
       name: Attack
     - attribute: def
+      description: "&8Increases total armour & toughness."
       name: Defence
     - attribute: pwr
+      description: "&8Increases magic damage & effects."
       name: Power
-    - attribute: res
-      name: Resistance
+    - attribute: mna
+      description: "&8Increases mana & mana regeneration."
+      name: Mana
     - attribute: spd
+      description: "&8Increases movement & magical speeds."
       name: Speed
     - attribute: mastery
       icon: nether_star
@@ -99,7 +105,7 @@ statselector:
           attribute: mastery
           max: 60
       name: "&e&l1 Stat Point"
-      description: "&6$mastery/60"
+      description: "&6Level @mastery/60"
       costs:
         xp: 1300
       earn: 1
@@ -153,12 +159,12 @@ statselector:
       earn: 1
       costs:
         xp: 250
-    - attribute: res
+    - attribute: mna
       requirement:
         attribute:
-          attribute: res
+          attribute: mna
           min: 0
-      name: "&cDecrease Resistance"
+      name: "&cDecrease Mana"
       icon: red_stained_glass_pane
       icon_disabled: black_stained_glass_pane
       attribute_amount: -1

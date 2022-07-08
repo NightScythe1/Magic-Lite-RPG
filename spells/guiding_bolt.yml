@@ -1,0 +1,66 @@
+guiding_bolt:
+  name: Guiding Bolt
+  description: 
+  actions:
+    cast:
+    - class: CustomProjectile
+      actions:
+      - class: Damage
+      - class: PotionEffect
+        add_effects:
+          glowing: 0
+        duration: "(pwr*50)+500"
+      - class: Interval
+        requires_entity_target: true
+        duration: "(pwr*50)+500"
+        actions:
+          - class: ModifyNoDamageTicks
+            no_damage_ticks: 0
+  effects:
+    cast:
+      -  class: EffectSingle
+         sound: entity_lightning_bolt_thunder
+         sound_pitch: 5
+         sound_volume: 1
+    projectile: 
+      - class: EffectSingle
+        effectlib: 
+          class: Vortex
+          particle: end_rod
+          radius: 0.25
+          circles: 1
+          helixes: 20
+          radials: 10
+          particle_count: 1
+    tick: 
+      - location: target
+        particle: end_rod
+        particle_count: 1
+        particle_offset_x: 0.001
+        particle_offset_y: 0.001
+        particle_offset_z: 0.001
+    hit:
+      - class: EffectSingle
+        sound: entity_evoker_fangs_attack
+        sound_volume: 2.5
+        sound_pitch: 1.5
+        location: target
+      - location: target
+        target_location: hit
+        effectlib:
+           class: Sphere
+           particle: end_rod
+           particles: 50
+           radius: 0.5
+           duration: 100
+           particle_data: 0.05
+           update_locations: false
+  parameters:
+      undo: 5000
+      undo_speed: 10
+      velocity: 50
+      range: 150
+      target_type: Damageable
+      damage: "(pwr/7.5)+2.5"
+      tick_size: 0.1
+      cooldown: 
