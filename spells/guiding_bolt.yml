@@ -1,6 +1,8 @@
 guiding_bolt:
+  # Cleric
+  # Level 1
   name: Guiding Bolt
-  description: 
+  description: Marks your target, and allows rapid damage.
   actions:
     cast:
     - class: CustomProjectile
@@ -11,6 +13,7 @@ guiding_bolt:
           glowing: 0
         duration: "(pwr*50)+500"
       - class: Interval
+        interval: 100
         requires_entity_target: true
         duration: "(pwr*50)+500"
         actions:
@@ -63,4 +66,6 @@ guiding_bolt:
       target_type: Damageable
       damage: "(pwr/7.5)+2.5"
       tick_size: 0.1
-      cooldown: 
+      cooldown: "((pwr*2)*1000)+20000"
+  costs:
+      mana: "((pwr*6.5)+25)"

@@ -1,0 +1,36 @@
+inflict_wounds:
+  # Cleric
+  # Level 1
+  name: Inflict Wounds
+  description: Cause melee damage.
+  actions:
+    cast:
+    - class: Damage
+    - class: PlayEffects
+      requires_entity_target: true
+      effects: hit
+  effects:
+    cast:
+      - sound: entity_player_attack_sweep
+      - particle: sweep_attack
+        location: origin
+    hit:
+      - sound: entity_player_attack_crit
+        location: target
+        sound_volume: 3
+      - particle: damage_indicator
+        particle_offset_x: 0.1
+        particle_offset_y: 0.1
+        particle_offset_z: 0.1
+        particle_count: 3
+        location: target
+        particle_data: 0.3
+  parameters:
+    magic_damage: false
+    range: "((pwr/15)+atk/15)+2"
+    target: other
+    target_type: LivingEntity
+    damage: "((pwr/10)+atk/8)+2.5"
+    cooldown: "((pwr/15)+atk/25)*1000+1000"
+  costs:
+    mana: "(((pwr*1.5)+atk)+6)"

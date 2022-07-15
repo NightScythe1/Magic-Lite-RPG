@@ -1,0 +1,61 @@
+fire_bolt:
+  # Sorcerer, Wizard
+  # Level 1
+  name: Fire Bolt
+  description:
+  actions:
+    cast:
+    - class: CustomProjectile
+      actions:
+        - class: Damage
+        - class: Ignite
+          duration: "(pwr/5)+3"
+  effects:
+    cast:
+      - sound: entity_blaze_shoot
+    tick:
+      - particle: flame
+        location: target
+        particle_count: 3
+        particle_offset_x: 0.1
+        particle_offset_z: 0.1
+        particle_offset_y: 0.1
+        particle_data: 0.01
+      - particle: smoke_normal
+        location: target
+        particle_count: 5
+        particle_offset_x: 0.1
+        particle_offset_z: 0.1
+        particle_offset_y: 0.1
+        particle_data: 0.05
+    hit:
+      - sound: block_fire_extinguish
+        location: target
+        sound_volume: 3
+      - particle: lava
+        particle_offset_x: 0.2
+        particle_offset_y: 0.2
+        particle_offset_z: 0.2
+        particle_count: 5
+        location: target
+        particle_data: 0.3
+      - particle: flame
+        particle_offset_x: 0.2
+        particle_offset_y: 0.2
+        particle_offset_z: 0.2
+        particle_count: 10
+        location: target
+        particle_data: 0.1
+  parameters:
+    projectile: SmallFireball
+    spread: 0
+    source_location: eyes
+    hitbox_size: 0.3
+    range: "((spd/5)+pwr/5) + 10"
+    projectile_effects: 
+    velocity: "(spd/2)+20"
+    damage: "(pwr/5.5)+1"
+    target: other
+    cooldown: "((pwr*1000)/5)+3500"
+  costs:
+    mana: "(pwr*4)+10"

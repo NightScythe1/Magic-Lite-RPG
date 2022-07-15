@@ -1,4 +1,6 @@
 eldritch_blast:
+  # Warlock
+  # Level 1
   name: Eldritch Blast
   description:
   actions:
@@ -39,12 +41,12 @@ eldritch_blast:
     source_location: eyes
     tick_size: 0.1
     hitbox_size: 1
-    range: "(spd/3) + 10"
+    range: "((spd/5)+pwr/5) + 10"
     damage: "((pwr/10)+4)"
     target_type: Damageable
     velocity_transform:
-      x: 15
+      x: 25
       y: rand(-5,5)
       z: rand(-5,5)
   costs:
-    mana: "(pwr+10)"
+    mana: "((pwr*4)+10)"

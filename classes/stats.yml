@@ -3,8 +3,8 @@ stats:
   effect_color: random
   #MINECRAFT stat changes
   #
-  mana_max: "(10 + (mna*5)*1.6)"
-  mana_regeneration: "1+mna*0.125"
+  mana_max: "50 + (mna*10)*1.9"
+  mana_regeneration: "1.5+mna*0.25"
   protection:
     physical: "def / 160"
     projectile: "def / 160"

@@ -4,15 +4,17 @@ statselector:
       cast:
       - class: Selector
   parameters:
-    title: "&5$balance &0- &2$xp XP"
+    title: "&2$xp XP"
+    cost_modifiers:
+      - scale: "(hp*0.1)*x"
     auto_close: false
     apply_to: mage
-    cost_type: "statpoints"
-    earn_type: "statpoints"
+    cost_type: xp
+    earn_type: xp
     show_unavailable: true
     allow_attribute_reduction: true
     placeholder_icon: air
-    limit: 25
+    limit: 40
     options:
     - placeholder: true
     - attribute: hp
@@ -26,6 +28,8 @@ statselector:
       attribute_amount: 1
       cost: 1
     - attribute: atk
+      cost_modifiers:
+      - scale: "(hp*0.1)*x"
       requirement:
         attribute:
           attribute: atk
@@ -34,7 +38,7 @@ statselector:
       icon: green_stained_glass_pane
       icon_disabled: white_stained_glass_pane
       attribute_amount: 1
-      cost: 1
+      cost: 10
     - attribute: def
       requirement:
         attribute:
@@ -44,7 +48,7 @@ statselector:
       icon: green_stained_glass_pane
       icon_disabled: white_stained_glass_pane
       attribute_amount: 1
-      cost: 1
+      cost: 10
     - attribute: pwr
       requirement:
         attribute:
@@ -96,92 +100,3 @@ statselector:
     - attribute: spd
       description: "&8Increases movement & magical speeds."
       name: Speed
-    - attribute: mastery
-      icon: nether_star
-      icon_disabled: barrier
-      attribute_amount: 1
-      requirement:
-        attribute:
-          attribute: mastery
-          max: 60
-      name: "&e&l1 Stat Point"
-      description: "&6Level @mastery/60"
-      costs:
-        xp: 1300
-      earn: 1
-    - placeholder: true
-    - placeholder: true
-    - attribute: hp
-      requirement:
-        attribute:
-          attribute: hp
-          min: 0
-      name: "&cDecrease Health"
-      icon: red_stained_glass_pane
-      icon_disabled: black_stained_glass_pane
-      attribute_amount: -1
-      earn: 1
-      costs:
-        xp: 250
-    - attribute: atk
-      requirement:
-        attribute:
-          attribute: atk
-          min: 0
-      name: "&cDecrease Attack"
-      icon: red_stained_glass_pane
-      icon_disabled: black_stained_glass_pane
-      attribute_amount: -1
-      earn: 1
-      costs:
-        xp: 250
-    - attribute: def
-      requirement:
-        attribute:
-          attribute: def
-          min: 0
-      name: "&cDecrease Defence"
-      icon: red_stained_glass_pane
-      icon_disabled: black_stained_glass_pane
-      attribute_amount: -1
-      earn: 1
-      costs:
-        xp: 250
-    - attribute: pwr
-      requirement:
-        attribute:
-          attribute: pwr
-          min: 0
-      name: "&cDecrease Power"
-      icon: red_stained_glass_pane
-      icon_disabled: black_stained_glass_pane
-      attribute_amount: -1
-      earn: 1
-      costs:
-        xp: 250
-    - attribute: mna
-      requirement:
-        attribute:
-          attribute: mna
-          min: 0
-      name: "&cDecrease Mana"
-      icon: red_stained_glass_pane
-      icon_disabled: black_stained_glass_pane
-      attribute_amount: -1
-      earn: 1
-      costs:
-        xp: 250
-    - attribute: spd
-      requirement:
-        attribute:
-          attribute: spd
-          min: 0
-      name: "&cDecrease Speed"
-      icon: red_stained_glass_pane
-      icon_disabled: black_stained_glass_pane
-      attribute_amount: -1
-      earn: 1
-      costs:
-        xp: 250
-    - placeholder: true
-    - placeholder: true

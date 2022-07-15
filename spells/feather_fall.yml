@@ -1,0 +1,46 @@
+feather_fall:
+  # Bard, Sorcerer, Wizard
+  # Level 1
+  name: Feather Fall
+  description: Float safely downwards.
+  actions:
+    cast:
+    - class: AreaOfEffect
+      radius: "(pwr/7.5)+2"
+      y_radius: "(pwr/7.5)+8"
+      actions:
+        - class: PotionEffect
+          add_effects:
+            slow_falling: 0
+          duration: "(((pwr*1000)+7000)/3)+1500"
+        - class: ChangeContext
+          target: other
+          actions:
+            - class: PlayEffects
+              effect: float
+  effects:
+    cast:
+    - location: target
+      effectlib:
+        class: Sphere
+        duration: 500
+        particles: 5
+        radius: 2
+        particle: cloud
+        particle_data: 0.2
+    - sound: entity_bat_takeoff
+    float:
+    - location: target
+      effectlib:
+        class: Sphere
+        duration: $duration
+        particles: 3
+        radius: 0.2
+        offset: 0,-1.8,0
+        particle: explosion_normal
+        particle_data: 0
+    - sound: block_amethyst_block_chime
+  parameters:
+    duration: "(((pwr*1000)+7000)/3)+1500"
+    target: self
+    target_self: true
