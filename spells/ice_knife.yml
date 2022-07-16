@@ -1,0 +1,79 @@
+ice_knife:
+  # Druid, Sorcerer, Wizard
+  # Level 1
+  name: Ice Knife
+  description: An ice shard that bursts frost on impact.
+  actions:
+    cast:
+    - class: CustomProjectile
+      miss:
+        - class: PlayEffects
+          effect: burst
+        - class: AreaOfEffect
+          radius: "(pwr/18)+2"
+          actions:
+            - class: Damage
+            - class: PlaySound
+              sound: block_glass_break
+              sound_pitch: 2
+      actions:
+        - class: Damage
+        - class: PotionEffect
+          add_effects:
+            slow: 3
+          duration: 1500
+        - class: Delay
+          delay: 1500
+        - class: PlayEffects
+          effect: burst
+        - class: AreaOfEffect
+          radius: "(pwr/18)+2"
+          actions:
+            - class: Damage
+            - class: PlaySound
+              sound: block_glass_break
+              sound_pitch: 2
+  effects:
+    cast:
+      - sound: entity_arrow_shoot
+        sound_pitch: 2
+    tick:
+      - particle: snowflake
+        location: target
+        particle_count: 3
+        particle_offset_x: 0.1
+        particle_offset_z: 0.1
+        particle_offset_y: 0.1
+        particle_data: 0.01
+    hit:
+      - sound: entity_player_hurt_freeze
+        sound_pitch: 2
+        location: target
+        sound_volume: 3
+      - particle: cloud
+        duration: 1500
+        particle_offset_x: 0.3
+        particle_offset_y: 0.3
+        particle_offset_z: 0.3
+        particle_count: 20
+        location: target
+        particle_data: 0
+    burst:
+      - sound: block_glass_break
+        location: target
+        sound_volume: 3
+      - particle: spit
+        particle_offset_x: 0.15
+        particle_offset_y: 0.15
+        particle_offset_z: 0.15
+        particle_count: 50
+        location: target
+        particle_data: 0.5
+  parameters:
+    target_count: 5
+    knockback_resistance: 1
+    damage: "(pwr/7.5)+3"
+    range: "((pwr+spd)/2.5)+20"
+    hitbox_size: 0.25
+    target_type: LivingEntity
+    cooldown: "(pwr/4)*1000+4000"
