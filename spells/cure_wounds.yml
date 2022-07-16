@@ -1,0 +1,31 @@
+cure_wounds:
+  # Bard, Cleric, Druid, Paladin, Ranger
+  # Level 1
+  name: Cure Wounds
+  description: Heal a close creature you look at.
+  actions:
+    cast:
+    - class: ConeOfEffect
+      range: 3
+      fov: 0.01
+      actions:
+        - class: PotionEffect
+          add_effects:
+            regeneration: 1
+          duration: "((pwr/10)*1000)+1500"
+  effects:
+    cast:
+    - location: origin_to_selection
+      effectlib:
+        class: Line
+        length: 3
+        particle: spell_mob
+        color: "#dda0dd"
+    - sound: block_brewing_stand_brew
+  parameters:
+    range: 3
+    target: other_entity
+    target_type: LivingEntity
+    cooldown: "((pwr/4)*1000)+4500"
+  costs:
+    mana: "(pwr*2.5)+9"

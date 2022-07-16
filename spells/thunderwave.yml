@@ -1,0 +1,62 @@
+thunderwave:
+  name: Thunderwave
+  description: A thunderous shockwave around you.
+  actions:
+    cast:
+    - class: AreaOfEffect
+      radius: 10
+      actions:
+        - class: Damage
+        - class: Velocity
+          y_offset: 0.5
+          speed: 2
+          push: 1
+  effects:
+     cast:
+     - location: origin
+       source_location: feet
+       target_location: feet
+       target_offset: 0,0.5,0
+       sound: entity_lightning_bolt_thunder
+       sound_pitch: 2
+       sound_volume: 1
+     - location: origin
+       source_location: feet
+       target_location: feet
+       effectlib:
+          class: Modified
+          duration: 500
+          parameters:
+              radius: "(t/i) * 10 + 0.2"
+          effect:
+              class: Warp
+              particle: redstone
+              color: "#ffff00"
+              rings: 5
+              particles: 50
+              particle_count: 5
+              update_locations: false
+              offset: 0,0,0
+     - location: origin
+       source_location: feet
+       target_location: feet
+       effectlib:
+          class: Modified
+          duration: 500
+          parameters:
+              radius: "(t/i) * 10.5 + 0.2"
+          effect:
+              class: Helix
+              particle: electric_spark
+              strands: 6
+              curve: 2
+              particles: 20
+              update_locations: false
+              offset: 0,0.1,0
+  parameters:
+    damage: "(pwr/3.5)+3.5"
+    target: self
+    target_type: LivingEntity
+    cooldown: "((pwr/2.5)+10)*1000"
+  costs:
+    mana: "(pwr*7)+20"
