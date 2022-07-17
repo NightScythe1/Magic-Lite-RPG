@@ -1,0 +1,3 @@
+sage:
+  inherit: stats
+  name: Sage

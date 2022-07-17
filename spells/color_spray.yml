@@ -1,0 +1,36 @@
+color_spray:
+  name: Color Spray
+  description: Damage Your Target
+  icon: stick
+  actions:
+    cast:
+    - class: Multiply
+      multiply: "(pwr/4)+4"
+      actions:
+        - class: CustomProjectile
+          actions:
+            - class: PotionEffect
+              add_effects:
+                blindness: "(pwr/10)"
+              duration: "((pwr/10)+2.5)*1000"
+            - class: Interval
+              duration: "((pwr/10)+2.5)*1000"
+              actions:
+                - class: Aggro
+                  clear_target: true
+  effects:
+    tick:
+    - location: target
+      particle: dust_color_transition
+      to_color: "#ffffff"
+      particle_offset_x: 0.01
+      particle_offset_y: 0.01
+      particle_offset_z: 0.01
+      particles: 10
+      color_override: mage
+    - sound: magic.zap
+  parameters:
+    range: "(pwr/4)+5"
+    hitbox_size: 0.1
+    spread: 0.5
+    velocity: 30

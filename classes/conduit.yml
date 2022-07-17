@@ -1,0 +1,3 @@
+conduit:
+  inherit: stats
+  name: Conduit

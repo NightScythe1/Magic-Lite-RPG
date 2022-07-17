@@ -1,0 +1,3 @@
+mercenary:
+  inherit: stats
+  name: Mercenary

@@ -21,7 +21,7 @@ statselector:
       requirement:
         attribute:
           attribute: hp
-          max: 20
+          max: 50
       name: "&aIncrease Health"
       icon: green_stained_glass_pane
       icon_disabled: white_stained_glass_pane
@@ -33,7 +33,7 @@ statselector:
       requirement:
         attribute:
           attribute: atk
-          max: 20
+          max: 50
       name: "&aIncrease Attack"
       icon: green_stained_glass_pane
       icon_disabled: white_stained_glass_pane
@@ -43,7 +43,7 @@ statselector:
       requirement:
         attribute:
           attribute: def
-          max: 20
+          max: 50
       name: "&aIncrease Defence"
       icon: green_stained_glass_pane
       icon_disabled: white_stained_glass_pane
@@ -53,7 +53,7 @@ statselector:
       requirement:
         attribute:
           attribute: pwr
-          max: 20
+          max: 50
       name: "&aIncrease Power"
       icon: green_stained_glass_pane
       icon_disabled: white_stained_glass_pane
@@ -63,7 +63,7 @@ statselector:
       requirement:
         attribute:
           attribute: mna
-          max: 20
+          max: 50
       name: "&aIncrease Mana"
       icon: green_stained_glass_pane
       icon_disabled: white_stained_glass_pane
@@ -73,7 +73,7 @@ statselector:
       requirement:
         attribute:
           attribute: spd
-          max: 20
+          max: 50
       name: "&aIncrease Speed"
       icon: green_stained_glass_pane
       icon_disabled: white_stained_glass_pane
